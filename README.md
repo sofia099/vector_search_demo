@@ -11,7 +11,7 @@ This Vector Search demo will showcase how to run a Vector Search query over IMDb
 
 First the Kaggle dataset needs to be extracted into smaller subsets. Refer to `extract_subsets.py`
 
-Now we can send API requests to OpenAI's embedding endpoint. Refer to `vector_embedding.py`. In this file, I create embeddings using OpenAI's second generation vector embedding model `text-embedding-ada-002`. For more information on this and other embedding models, check out OpenAI's [docs](https://platform.openai.com/docs/guides/embeddings). For the IMDb movie dataset, I embedd the `movie_name` and the `description` fields:
+Now we can send API requests to OpenAI's embedding endpoint. Refer to `vector_embedding.py`. In this file, I create embeddings using OpenAI's second generation vector embedding model `text-embedding-ada-002`. For more information on this and other embedding models, check out OpenAI's [docs](https://platform.openai.com/docs/guides/embeddings). For the IMDb movie dataset, I embedded the `movie_name` and the `description` fields:
 
 ```
 values = [row['movie_name']+' '+row['description'] for row in rows]
