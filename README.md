@@ -74,7 +74,8 @@ Victrix 2 The Cauldron
 Untitled Medieval Tragedy
 Heroji
 ```
-<br /><br />
+<br />
+
 ### Want more information?
 Check out this recording of a workshop I hosted on Vector Search: <br />
 *coming soon*
