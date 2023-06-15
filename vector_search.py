@@ -4,7 +4,7 @@ from rockset import RocksetClient
 ### EDIT BELOW
 OPENAI_API_KEY = 'YOUR_OPENAI_API_KEY'
 ROCKSET_API_KEY = 'YOUR_ROCKSET_API_KEY'
-host_url = 'https://api.usw2a1.rockset.com'
+host_url = 'https://api.usw2a1.rockset.com' # use the Base URL associated with your region found here: https://rockset.com/docs/rest-api/
 
 search_query = "medieval, knights, castles, dragons"
 ### STOP
