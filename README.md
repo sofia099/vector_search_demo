@@ -64,7 +64,17 @@ response = rs.sql(query="SELECT movie_name FROM movies.imdb_movies \
 ```
 In the above query we are applying a metadata filter on the genre. This will speed up our query. Perhaps this search function is set-up on the 'History movies' webpage of your site. If you want to search through the entire dataset, remove the line containing the WHERE clause. The query is ordered by a distance function (in this case that is COSINE_SIM). This calculates the distance between the search query and the movies in our dataset. We want to output the 5 movies that are the closest in distance (also known as the 5 Nearest Neighbors! The LIMIT is the 'k' in kNN also known as k-Nearest Neighbors).
 
-Note that in the query above, I am reading from workspace `movies` and collection `imdb_movies`. Adjust according to the names you used!<br /><br />
+Note that in the query above, I am reading from workspace `movies` and collection `imdb_movies`. Adjust according to the names you used!
+
+The result are the following 5 movies:
+```
+Kingdom of Swords
+Ironclad
+Victrix 2 The Cauldron
+Untitled Medieval Tragedy
+Heroji
+```
+<br /><br />
 
 ### Want more information?
 Check out this recording of a workshop I hosted on Vector Search: <br />
