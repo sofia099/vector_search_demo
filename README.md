@@ -46,8 +46,8 @@ In order to execute a Vector Search query over the dataset, we will need a real-
     _input
   ```
 
-  6. In the next page, type a workspace name and collection name. I used workspace=`movies` and collection=`imdb_movies`
-  7. Final step is to click "Create" and wait for the data to bulk ingest into your Rockset collection. This will take anywhere from 5-10min with embedded IMDb dataset. The final dataset will be ~243k docs and ~8.2 GiB.<br /><br />
+  6. In the next page, type a workspace name and collection name. I used workspace=`movies` and collection=`imdb_movies`. I also recommend swithing your Virtual Instance to a dedicated size (this just means that your ingestion will be on a cluster that only you are using - so its not shared with other users. In Rockset any Virtual Instance that is a size Small or greater is on a dedicated VI). If you are a new trial user, you will see an option to switch your Virtual Instance to a medium. There is no additional cost for trial users since they have $300 credit to use up. Saves so much time!
+  8. Final step is to click "Create" and wait for the data to bulk ingest into your Rockset collection. This will take anywhere from 5-10min with embedded IMDb dataset. The final dataset will be ~243k docs and ~8.2 GiB.<br /><br />
 
 ## Step 3: Execute a Vector Search Query using Rockset's API
 
