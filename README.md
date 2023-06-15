@@ -2,9 +2,11 @@
 
 This repository was created as an introductory to vector search in real-time using OpenAI for vector embedding and Rockset as a real-time engine. Below is a step-by-step guide on how to get started! You will need to create an account on both OpenAI and Rockset to get an API key for both platforms. Thankfully, API keys are available on the free versions. To create an account on OpenAI go [here](https://platform.openai.com/signup?) and to create an account on Rockset go [here](https://rockset.com/create/).
 
+\n
 ## Data Collection
 This Vector Search demo will showcase how to run a Vector Search query over IMDb movie titles & descriptions using keywords as the search query. The unembedded dataset can be found on [Kaggle](https://www.kaggle.com/datasets/rajugc/imdb-movies-dataset-based-on-genre?select=action.csv). The embedded dataset can be found in this public AWS [S3 bucket](s3://rockset-community-datasets/public/imdb-movies/)
 
+\n
 ## Step 1: Embed Vectors using OpenAI's API
 *This step can be skipped if you download the embedded dataset on AWS S3. Below are the steps I took to embed the vectors in case you would like to replicate it for your own dataset.*
 
@@ -19,6 +21,7 @@ embeddings = [generate_embeddings(value) for value in values]
 
 The vector embeddings for `text-embedding-ada-002` contain 1536 elements so expect a significant storage size increase. The embeddings are appended onto the original subset files.
 
+\n
 ## Step 2: Upload Data to Rockset
 In order to execute a Vector Search query over the dataset, we will need a real-time database to host our collection. With a larger dataset, I recommend dropping the files in an AWS S3 bucket and then ingesting it into Rockset using these [docs](https://rockset.com/docs/amazon-s3/). If you are using the embedded dataset I shared above, you can ingest right away by following these steps:
   1. In the Rockset Console, go to the "Collections" tab and then select "Create a Collection"
@@ -48,6 +51,7 @@ In order to execute a Vector Search query over the dataset, we will need a real-
   6. In the next page, type a workspace name and collection name. I used workspace=`movies` and collection=`imdb_movies`
   7. Final step is to click "Create" and wait for the data to bulk ingest into your Rockset collection. This will take anywhere from 5-10min with embedded IMDb dataset. The final dataset will be ~243k docs and ~8.2 GiB.
 
+\n
 ## Step 3: Execute a Vector Search Query using Rockset's API
 
 Refer to `vector_search.py` for this step. This python file takes a search_query as an input, runs a vector search SQL, then prints the results. In this example, the search query is:
@@ -65,13 +69,18 @@ In the above query we are applying a metadata filter on the genre. This will spe
 
 Note that in the query above, I am reading from workspace `movies` and collection `imdb_movies`. Adjust according to the names you used!
 
+\n
 ### Want more information?
 Check out this recording of a workshop I hosted on Vector Search: 
+\n
 *coming soon*
 
-Check out this awesome talk on vector search at scale in real-time: 
+Check out this awesome talk on vector search at scale in real-time:
+\n
 https://rockset.com/videos/how-to-build-real-time-machine-learning-at-scale/
 
 Check out these cool blogs:
+\n
 https://rockset.com/blog/introducing-vector-search-on-rockset/
+\n
 https://rockset.com/blog/5-use-cases-for-vector-search/
