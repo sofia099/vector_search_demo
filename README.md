@@ -4,12 +4,12 @@ This repository was created as an introductory to vector search in real-time usi
 
 
 ## Data Collection
-This Vector Search demo will showcase how to run a Vector Search query over IMDb movie titles & descriptions using keywords as the search query. The unembedded dataset can be found on [Kaggle](https://www.kaggle.com/datasets/rajugc/imdb-movies-dataset-based-on-genre?select=action.csv). The embedded dataset can be found in this public AWS S3 bucket: s3://rockset-community-datasets/public/imdb-movies/ <br /><br />
+This Vector Search demo will showcase how to run a Vector Search query over IMDb movie titles & descriptions using keywords as the search query. The unembedded dataset can be found on [Kaggle](https://www.kaggle.com/datasets/rajugc/imdb-movies-dataset-based-on-genre?select=action.csv). The embedded dataset can be found in this public AWS S3 bucket: `s3://rockset-community-datasets/public/imdb-movies/` <br /><br />
 
 ## Step 1: Embed Vectors using OpenAI's API
 *This step can be skipped if you choose to use the embedded dataset on AWS S3. Below are the steps I took to embed the vectors in case you would like to replicate it for your own dataset.*
 
-First the Kaggle dataset needs to be extracted into smaller subsets. Refer to `extract_subsets.py`
+First, the Kaggle dataset needs to be extracted into smaller subsets. Refer to `extract_subsets.py`
 
 Now we can send API requests to OpenAI's embedding endpoint. Refer to `vector_embedding.py`. In this file, I create embeddings using OpenAI's second generation vector embedding model `text-embedding-ada-002`. For more information on this and other embedding models, check out OpenAI's [docs](https://platform.openai.com/docs/guides/embeddings). For the IMDb movie dataset, I embedded the `movie_name` and the `description` fields:
 
@@ -25,7 +25,7 @@ In order to execute a Vector Search query over the dataset, we will need a real-
   1. In the Rockset Console, go to the "Collections" tab and then select "Create a Collection"
   2. Select "Amazon S3" then " — public bucket — "
   3. Click "Start" then select "CSV/TSV" for File Format
-  4. Enter "s3://rockset-community-datasets/public/imdb-movies/" in the S3 Path then click "Next"
+  4. Enter `s3://rockset-community-datasets/public/imdb-movies/` in the S3 Path then click "Next"
   5. Do NOT use the default ingest transformation. You will need to use VECTOR_ENFORCE to ensure all the vector embeddings are the same size & type (this will ensure the data is perfectly compacted during query execution). Copy and paste the ingest transformation below:
 
   ```
