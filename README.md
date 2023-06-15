@@ -4,7 +4,7 @@ This repository was created as an introductory to vector search in real-time usi
 
 
 ## Data Collection
-This Vector Search demo will showcase how to run a Vector Search query over IMDb movie titles & descriptions using keywords as the search query. The unembedded dataset can be found on [Kaggle](https://www.kaggle.com/datasets/rajugc/imdb-movies-dataset-based-on-genre?select=action.csv). The embedded dataset can be found in this public AWS [S3 bucket](s3://rockset-community-datasets/public/imdb-movies/)<br /><br />
+This Vector Search demo will showcase how to run a Vector Search query over IMDb movie titles & descriptions using keywords as the search query. The unembedded dataset can be found on [Kaggle](https://www.kaggle.com/datasets/rajugc/imdb-movies-dataset-based-on-genre?select=action.csv). The embedded dataset can be found in this public AWS S3 bucket: s3://rockset-community-datasets/public/imdb-movies/ <br /><br />
 
 ## Step 1: Embed Vectors using OpenAI's API
 *This step can be skipped if you download the embedded dataset on AWS S3. Below are the steps I took to embed the vectors in case you would like to replicate it for your own dataset.*
