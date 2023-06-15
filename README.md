@@ -55,7 +55,7 @@ Refer to `vector_search.py` for this step. This python file takes a search_query
 ```
 search_query = "medieval, knights, castles, dragons"
 ```
-You can change the search query to be any movie keywords. We then embed the search query in the following lines using OpenAI again and then pass the embedded search query vector as a string `embedding_str` in the following request to the RocksetClient:
+You can change the search query to be any movie keywords. We then embed the search query using OpenAI again and then pass the embedded search query vector as a string `embedding_str` in the following request to the RocksetClient:
 
 ```
 response = rs.sql(query="SELECT movie_name FROM movies.imdb_movies \
