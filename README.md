@@ -78,7 +78,7 @@ Heroji
 
 ### Want more information?
 Check out this recording of a workshop I hosted on Vector Search: <br />
-*coming soon*
+https://www.youtube.com/watch?v=3JpCU2x7jQk
 
 Check out this awesome talk on vector search at scale in real-time: <br />
 https://rockset.com/videos/how-to-build-real-time-machine-learning-at-scale/
