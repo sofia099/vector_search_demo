@@ -1,8 +1,8 @@
 # vector_search_demo
 
-This repository was created as an introductory to vector search in real-time using OpenAI for vector embedding and Rockset as a real-time engine. Below is a step-by-step guide on how to get started! You will need to create an account on both OpenAI and Rockset to get an API key for both platforms. Thankfully, API keys are available on the free versions. To create an account on OpenAI go [here](https://platform.openai.com/signup?) and to create an account on Rockset go [here](https://rockset.com/create/).
+This repository was created as an introductory to vector search in real-time using OpenAI for vector embedding and Rockset as a real-time engine. Below is a step-by-step guide on how to get started! You will need to create an account on both OpenAI and Rockset to get an API key for both platforms. Thankfully, API keys are available on the free versions. To create an account on OpenAI go [here](https://platform.openai.com/signup?) and to create an account on Rockset go [here](https://rockset.com/create/).\
 
-\
+
 ## Data Collection
 This Vector Search demo will showcase how to run a Vector Search query over IMDb movie titles & descriptions using keywords as the search query. The unembedded dataset can be found on [Kaggle](https://www.kaggle.com/datasets/rajugc/imdb-movies-dataset-based-on-genre?select=action.csv). The embedded dataset can be found in this public AWS [S3 bucket](s3://rockset-community-datasets/public/imdb-movies/)
 
